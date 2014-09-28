@@ -1,0 +1,19 @@
+GENERAL ASSEMBLY: Data Science Fall 2014
+STUDENT: Eric Xu
+
+DATA EXPLORATION01
+
+
+**NOTE** for this dataexplor, and this one only, please answer the questions without using any formal statistical methods.
+
+Dataset: chicagohouseprices.xlsx. “House Prices” is a list of homes sold in Chicago. “Neighborhood Information” contains broad demographic data for each neighborhood.
+
+What is the price of 1342 N Leavitt Street? It's located in Wicker Park, a single-family home with two baths. The home is a 10 minute drive from the loop and 3.96 miles to Lake Michigan. The local crime index is 3.76 and the local school index is 16.7. The house is 116 years old. The lot size is 3,049 sqft and the house size is 3,154 sqft.
+  A: First I would try to determine which attribute about the house has a significant effect on its price. My guess is that the neighborhood, age, house type and house size affects the price more than things like minutes to loop and miles to lake.
+  (The technical workflow for this step might look something like: create a scatterplot between each variable and the price; eye ball which ones seems to follow a pattern and then choose an appropriate regression model; discard any predictor variables that are not statistically significant)
+  Once we've isolated the relevant variables, we can combine them to understand the simultaneous influence that they have on the price of the house. A single predictor variable that shows a strong correlation with the price might have less effect when other predictors are brought into the picture. Therefore, the goal is to come up with the simplest model that does the best job at predicting.
+  (Possible technical workflow: multivariate regression analysis; check and take care of multicollinearity between predictor variables; use partial correlations to simplify the model)
+  Or just call up the next door neighbors and ask how much they would pay for the house.
+
+How confident are you with your answer?
+  A: above average.

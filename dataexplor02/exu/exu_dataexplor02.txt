@@ -1,0 +1,13 @@
+GENERAL ASSEMBLY: Data Science Fall 2014
+NAME: Eric Xu
+
+DATA EXPLORATION02
+
+Dataset: africa_ph.csv. “pH” values for African soil samples. This is the kick off project to Kaggle's Africa Soil challenge! This week we'll be looking at only a subset of the data. Variable descriptions can be found on the kaggle competition page after registering. Infrared01 through Infrared05 are variables created from the original 3,578 infrared readings taken on each sample.
+
+What is the pH of the sample described in africa_test.csv?
+A: First I went to the AFSIS website and went through a crash course on what infrared spectroscopy is. After that I had a better understanding of what the data stored in the infrared measurement columns actually meant.
+After opening up the provided csv, the first thing that I did was create a scatter plot of each infrared column with the pH column. Since we were introduced to the linear regression model during the last class, I wanted to apply that to the data. The only predictor that looked linearly correlated with the pH was Infrared02. So after fitting Sklearn's linear regression model on the pH and Infrared02 columns, it returned a coefficient of 12.84629, and intercept of -0.89127. Extrapolating off of this prediction alone, would suggest that the test soil sample would have a pH level of -0.3672698309.
+
+How confident are you with your answer?
+A: Not very confident unfortunately. Eventhough the p value suggests a statistically significant correlation between pH and Infrared02, I'm weary of its overall predictive ability. There were other patterns in the training data but I did not know how to apply them. For example for Infrared01, there's a high probability that any readings above 0.5 will not produce soil pH greater than 1. I'm hoping the upcoming class will talk a bit about creating new variables and how to plug them into our regression models.
